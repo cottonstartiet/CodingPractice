@@ -8,9 +8,9 @@ namespace CodingPractice
         static void Main(string[] args)
         {
             // LinkedListSample();
-            FirstUniqueNumberIndex();
-            //RunDialPadProblem();
-            // FizzBuzz.PrintFizzBuzz(25);
+            // FirstUniqueNumberIndex()
+            RunDialPadProblem();
+            //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
         }
@@ -40,6 +40,10 @@ namespace CodingPractice
         {
             DialPadProblem dp = new DialPadProblem();
             var combinations = dp.GetCombinations(2, 3);
+            foreach (var comb in combinations)
+            {
+                Console.WriteLine(comb);
+            }
         }
 
         private static void LinkedListSample()
