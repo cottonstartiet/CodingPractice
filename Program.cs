@@ -8,10 +8,19 @@ namespace CodingPractice
         static void Main(string[] args)
         {
             // LinkedListSample();
-            RunDialPadProblem();
+            FirstUniqueNumberIndex();
+            //RunDialPadProblem();
             // FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
+        }
+
+        private static void FirstUniqueNumberIndex()
+        {
+            var (number, index) = ArrayHelper.GetFirstUniqueNumberIndex(new int[] { 10, 1, 1, 2, 2, 3, 4, 4, 5 });
+            Console.WriteLine($"First unique number {number} is present at index {index}");
+            (number, index) = ArrayHelper.GetFirstUniqueNumberIndex(new int[] { 1, 1, 2, 2, 3, 4, 4, 5 });
+            Console.WriteLine($"First unique number {number} is present at index {index}");
         }
 
         private static void FactorialSample()
