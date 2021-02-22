@@ -5,27 +5,46 @@ namespace CodingPractice
 {
     public class DialPadProblem
     {
-        private string[][] dialPad = new string[4][]
+        string[] mappings = new string[]
         {
-            new string[] {"", "ABC", "DEF"},
-            new string[] {"GHI", "JKL", "MNO"},
-            new string[] {"PQRS", "TUV", "WXYZ"},
-            new string[] {"", "", ""}
+            "0",
+            "1",
+            "ABC",
+            "DEF",
+            "GHI",
+            "JKL",
+            "MNO",
+            "PQRS",
+            "TUV",
+            "WXYZ"
         };
 
-        internal List<string> GetCombinations(int startNumber, int length)
+        internal List<string> GetCombinations(string digits)
         {
             var results = new List<string>();
-            for (int i = 0; i < dialPad.Length; i++)
+            if (string.IsNullOrEmpty(digits))
             {
-                var row = dialPad[i];
-                for (int j = 0; j < row.Length; j = j + 3)
-                {
-                    Console.WriteLine($"{row[j]} {row[j + 1]} {row[j + 2]}");
-                }
+                return results;
             }
 
+            TraverseDepth(results, digits, "", 0);
+
             return results;
+        }
+
+        private void TraverseDepth(List<string> results, string digits, string combination, int index)
+        {
+            if (index == digits.Length)
+            {
+                results.Add(combination);
+                return;
+            }
+
+            string letters = mappings[int.Parse(digits[index].ToString())];
+            foreach (char ch in letters)
+            {
+                TraverseDepth(results, digits, combination + ch, index + 1);
+            }
         }
     }
 }

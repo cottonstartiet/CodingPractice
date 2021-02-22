@@ -10,7 +10,7 @@ namespace CodingPractice
             // LinkedListSample();
             // FirstUniqueNumberIndex()
             // ContainsDuplicate();
-            RunDialPadProblem();
+            DialPadProblem();
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
@@ -55,10 +55,10 @@ namespace CodingPractice
             System.Console.WriteLine($"Decoded - {Base64Encoding.Decode(encoded)}");
         }
 
-        private static void RunDialPadProblem()
+        private static void DialPadProblem()
         {
             DialPadProblem dp = new DialPadProblem();
-            var combinations = dp.GetCombinations(2, 3);
+            var combinations = dp.GetCombinations("23");
             foreach (var comb in combinations)
             {
                 Console.WriteLine(comb);
