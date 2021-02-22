@@ -9,17 +9,36 @@ namespace CodingPractice
         {
             // LinkedListSample();
             // FirstUniqueNumberIndex()
-            RunDialPadProblem();
+            ContainsDuplicate();
+            // RunDialPadProblem();
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
         }
 
+        private static void ContainsDuplicate()
+        {
+            var array = new int[] { 10, 1, 1, 2, 2, 3, 4, 4, 5 };
+            array.Print();
+            var containsDup = array.ContainsDuplicate();
+            Console.WriteLine($"Array contains duplicate? {containsDup}");
+
+            array = new int[] { 1, 2, 3, 4, 5 };
+            array.Print();
+            containsDup = array.ContainsDuplicate();
+            Console.WriteLine($"Array contains duplicate? {containsDup}");
+        }
+
         private static void FirstUniqueNumberIndex()
         {
-            var (number, index) = ArrayHelper.GetFirstUniqueNumberIndex(new int[] { 10, 1, 1, 2, 2, 3, 4, 4, 5 });
+            var array = new int[] { 10, 1, 1, 2, 2, 3, 4, 4, 5 };
+            array.Print();
+            var (number, index) = array.GetFirstUniqueNumberIndex();
             Console.WriteLine($"First unique number {number} is present at index {index}");
-            (number, index) = ArrayHelper.GetFirstUniqueNumberIndex(new int[] { 1, 1, 2, 2, 3, 4, 4, 5 });
+
+            array = new int[] { 1, 1, 2, 2, 3, 4, 4, 5 };
+            array.Print();
+            (number, index) = array.GetFirstUniqueNumberIndex();
             Console.WriteLine($"First unique number {number} is present at index {index}");
         }
 
