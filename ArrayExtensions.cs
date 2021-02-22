@@ -21,11 +21,11 @@ namespace CodingPractice
                 }
             }
 
-            foreach (var key in indexes.Keys)
+            foreach (var num in numbers)
             {
-                if (indexes[key] != -1)
+                if (indexes[num] != -1)
                 {
-                    return new Tuple<int, int>(key, indexes[key]);
+                    return new Tuple<int, int>(num, indexes[num]);
                 }
             }
 

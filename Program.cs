@@ -8,9 +8,9 @@ namespace CodingPractice
         static void Main(string[] args)
         {
             // LinkedListSample();
-            // FirstUniqueNumberIndex()
+            FirstUniqueNumberIndex();
             // ContainsDuplicate();
-            DialPadProblem();
+            // DialPadProblem();
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
