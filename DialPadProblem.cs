@@ -7,10 +7,10 @@ namespace CodingPractice
     {
         private string[][] dialPad = new string[4][]
         {
-            new string[] {"", "", "ABC"},
-            new string[] {"DEF", "GHI", "JKL"},
-            new string[] {"MNO", "PQRS", "TUV"},
-            new string[] {"", "WXYZ", ""}
+            new string[] {"", "ABC", "DEF"},
+            new string[] {"GHI", "JKL", "MNO"},
+            new string[] {"PQRS", "TUV", "WXYZ"},
+            new string[] {"", "", ""}
         };
 
         internal List<string> GetCombinations(int startNumber, int length)
@@ -21,7 +21,7 @@ namespace CodingPractice
                 var row = dialPad[i];
                 for (int j = 0; j < row.Length; j = j + 3)
                 {
-                    System.Console.WriteLine($"{row[j]} {row[j + 1]} {row[j + 2]}");
+                    Console.WriteLine($"{row[j]} {row[j + 1]} {row[j + 2]}");
                 }
             }
 

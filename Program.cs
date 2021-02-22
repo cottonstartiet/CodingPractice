@@ -9,8 +9,8 @@ namespace CodingPractice
         {
             // LinkedListSample();
             // FirstUniqueNumberIndex()
-            ContainsDuplicate();
-            // RunDialPadProblem();
+            // ContainsDuplicate();
+            RunDialPadProblem();
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
