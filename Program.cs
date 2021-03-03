@@ -7,13 +7,23 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
+            FirstUniqueLetterOfString();
             // LinkedListSample();
-            FirstUniqueNumberIndex();
+            // FirstUniqueNumberIndex();
             // ContainsDuplicate();
             // DialPadProblem();
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
+        }
+
+        private static void FirstUniqueLetterOfString()
+        {
+            var (char1, index1) = "Aseem Gaurav".GetFirstUniqueLetterIndex();
+            Console.WriteLine($"First unique character: {char1} at index: {index1}");
+
+            var (char2, index2) = "aabbccdd".GetFirstUniqueLetterIndex();
+            Console.WriteLine($"No unique character found: {index2}");
         }
 
         private static void ContainsDuplicate()
