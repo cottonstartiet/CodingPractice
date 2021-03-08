@@ -23,6 +23,9 @@ namespace CodingPractice
             var target = 4;
             var (result, num1, num2) = TwoSumHelper.IsSumPossible(new int[] { 3, 5, 1, 4, 6 }, target);
             Console.WriteLine($"Target can be obtained by adding {num1} and {num2}");
+
+            var (result2, num12, num22) = TwoSumHelper.IsSumPossible(new int[] { 3, 5, 1, 4, 6 }, target);
+            Console.WriteLine($"Target can not be obtained.");
         }
 
         private static void FirstUniqueLetterOfString()
