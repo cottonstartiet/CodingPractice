@@ -7,7 +7,8 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
-            FirstUniqueLetterOfString();
+            TwoSum();
+            // FirstUniqueLetterOfString();
             // LinkedListSample();
             // FirstUniqueNumberIndex();
             // ContainsDuplicate();
@@ -15,6 +16,13 @@ namespace CodingPractice
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
+        }
+
+        private static void TwoSum()
+        {
+            var target = 4;
+            var (result, num1, num2) = TwoSumHelper.IsSumPossible(new int[] { 3, 5, 1, 4, 6 }, target);
+            Console.WriteLine($"Target can be obtained by adding {num1} and {num2}");
         }
 
         private static void FirstUniqueLetterOfString()
