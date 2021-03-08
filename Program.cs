@@ -7,7 +7,9 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
-            TwoSum();
+            MergeNSortedArrays();
+            // MergeTwoSortedArrays();
+            // TwoSum();
             // FirstUniqueLetterOfString();
             // LinkedListSample();
             // FirstUniqueNumberIndex();
@@ -16,6 +18,30 @@ namespace CodingPractice
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
+        }
+
+        private static void MergeNSortedArrays()
+        {
+            var result = MergeHelper.MergeNSortedArrays(new int[3][] {
+                new int[] {2,4,6},
+                new int[] {1,3,5},
+                new int[] {7,8,9}
+            });
+
+            foreach (var num in result)
+            {
+                Console.Write($"{num} ");
+            }
+        }
+
+        private static void MergeTwoSortedArrays()
+        {
+            var result = MergeHelper.MergeSortedArrays(new int[] { 2, 4, 6 }, new int[] { 3, 5 });
+            Console.WriteLine("Merged Array:");
+            foreach (var num in result)
+            {
+                Console.WriteLine(num);
+            }
         }
 
         private static void TwoSum()
