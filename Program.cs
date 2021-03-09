@@ -7,7 +7,8 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
-            MergeNSortedArrays();
+            FindLongestPath();
+            // MergeNSortedArrays();
             // MergeTwoSortedArrays();
             // TwoSum();
             // FirstUniqueLetterOfString();
@@ -18,6 +19,25 @@ namespace CodingPractice
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
+        }
+
+        private static void FindLongestPath()
+        {
+            // var array = new int[][]
+            // {
+            //     new int[] { 0, 0, 0, 1, 0, 0 },
+            //     new int[] { 1, 1, 0, 1, 0, 0 },
+            //     new int[] { 0, 1, 0, 1, 1, 0 },
+            //     new int[] { 0, 1, 1, 0, 1, 0 }
+            // };
+            var array = new int[][]
+            {
+                new int[] { 0, 1 },
+                new int[] { 0, 1 }
+            };
+            var pathHelper = new PathHelper();
+            var result = pathHelper.GetLongestPath(array, 0, 1);
+            Console.WriteLine($"Longest path length is {result}");
         }
 
         private static void MergeNSortedArrays()
