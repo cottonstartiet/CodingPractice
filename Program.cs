@@ -7,7 +7,7 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
-            FindLongestPath();
+            // FindLongestPath();
             // MergeNSortedArrays();
             // MergeTwoSortedArrays();
             // TwoSum();
