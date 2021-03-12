@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CodingPractice.Models;
 
 namespace CodingPractice
@@ -7,7 +8,8 @@ namespace CodingPractice
     {
         static void Main(string[] args)
         {
-            FindLongestPath();
+            ProcessEevnts();
+            // FindLongestPath();
             // MergeNSortedArrays();
             // MergeTwoSortedArrays();
             // TwoSum();
@@ -19,6 +21,29 @@ namespace CodingPractice
             //FizzBuzz.PrintFizzBuzz(25);
             // FactorialSample();
             // Base64EncodingSample();
+        }
+
+        private static void ProcessEevnts()
+        {
+            var processor = new EventProcessor<string>(5, 5);
+            var list = new List<string>();
+            list.Add("1");
+            list.Add("2");
+            list.Add("3");
+            list.Add("4");
+            processor.ProcessEvents(list);
+            processor.Tick().Tick().Tick().Tick();
+            processor.Tick();
+            list = new List<string>();
+            list.Add("1");
+            list.Add("2");
+            list.Add("3");
+            processor.ProcessEvents(list);
+            list = new List<string>();
+            list.Add("4");
+            list.Add("5");
+            list.Add("6");
+            processor.ProcessEvents(list);
         }
 
         private static void FindLongestPath()
@@ -135,7 +160,7 @@ namespace CodingPractice
         private static void LinkedListSample()
         {
             System.Console.WriteLine("Linked list sample");
-            var ll = new LinkedList<int>();
+            var ll = new Models.LinkedList<int>();
             ll.Add(1);
             ll.Add(2);
             ll.Add(3);
