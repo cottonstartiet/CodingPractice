@@ -42,6 +42,7 @@ namespace CodingPractice
             list.Add("4");
             list.Add("5");
             list.Add("6");
+            processor.Tick();
             processor.ProcessEvents(list);
         }
 
